@@ -1,0 +1,37 @@
+body {
+   background-size: cover;
+}
+
+*[role="form"] {
+   max-width: 830px;
+   padding: 15px;
+   margin: 0 auto;
+   border-radius: 0.3em;
+   background-color: #f2f2f2;
+}
+
+*[role="form"] h2 { 
+   font-family: 'Open Sans' , sans-serif;
+   font-size: 40px;
+   font-weight: 600;
+   color: #000000;
+   margin-top: 5%;
+   text-align: center;
+   text-transform: uppercase;
+   letter-spacing: 4px;
+}
+
+.form-horizontal{
+   padding: 15px;
+   padding-left: 115px;
+}
+
+@media only screen and(max-width:980px){
+   .form-horizontal{
+       width: 100%;
+       margin-left: 0;
+       padding-left: 0;
+       padding: 0;
+   }
+   
+}
