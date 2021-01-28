@@ -26,28 +26,3 @@ anime.timeline({loop: true})
     easing: "easeOutExpo",
     delay: 1000
   });
-
-//validate
-
-    //   // Form validation code will come here.
-    //   function validate() {
-      
-        
-    //      if( document.myForm.email.value == "" ) {
-    //         alert( "Please provide your Email!" );
-    //         document.myForm.email.focus() ;
-    //         return false;
-    //      }
-    //      if( document.myForm.password.value == "" ) {
-    //       alert( "Please provide your password!" );
-    //       document.myForm.password.focus() ;
-    //       return false;
-    //    }
-    //    if( document.myForm.password.value != document.myForm.confpasswd.value) {
-    //     alert( "Password doesn't match!" );
-    //     document.myForm.confpasswd.focus() ;
-    //     return false;
-    //  }
-    //      return( true );
-    //   }
-

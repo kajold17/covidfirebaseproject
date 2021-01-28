@@ -20,18 +20,29 @@
     
 
 </head>
+
 <body>
+    <nav class="navbar navbar-light bg-info">
+        <img src="logo.jpg" class="logo">
+        <a class="navbar-brand font-weight-bold text-primary">vaccineCentre</a>
+        <form class="form-inline">
+          <button id="logout" class="btn btn-outline-primary my-2 my-sm-0" type="button">LogOut</button>
+        </form>
+      </nav>
+
     <div class="container">
-        <form class="form-horizontal" role="form">
+        <form  role="form">
             <h2>Register for vaccination</h2>
-            <div class="form-group">
-                <label for="firstName" class="col-sm-3 control-label">First Name</label>
+            <hr>
+        <div class="form-horizontal">
+            <div class="form-group ">
+                <label for="firstName" class="col-sm-3 control-label">First Name*</label>
                 <div class="col-sm-9">
                     <input type="text" id="firstName" placeholder="First Name" class="form-control" autofocus required>
                 </div>
             </div>
             <div class="form-group">
-                <label for="lastName" class="col-sm-3 control-label">Last Name</label>
+                <label for="lastName" class="col-sm-3 control-label">Last Name*</label>
                 <div class="col-sm-9">
                     <input type="text" id="lastName" placeholder="Last Name" class="form-control" required>
                 </div>
@@ -51,97 +62,91 @@
             </div>
 
             <div class="form-group">
-                <label for="phoneNumber" class="col-sm-3 control-label">Phone number </label>
+                <label for="phoneNumber" class="col-sm-3 control-label">Phone number*</label>
                 <div class="col-sm-9">
                     <input type="phoneNumber" id="phoneNumber" placeholder="Phone number" class="form-control"required>
                 </div>
             </div>
-            < class="form-group">
-                <label class="control-label col-sm-3">Age Group</label>
-                <div class="col-sm-6">
+            <div class="form-group">
+                <label class="control-label col-sm-3">Age Group*</label>
+                <div class="col-sm-8">
                     <div class="row">
-                        <div class="col-sm-5">
+                        <div class="col-sm-6">
                             <input class="form-check-input" type="radio" name="age" id="ageRadios" value="agegrp1">
                             <label class="form-check-label" for="ageRadios">Child (0-16)</label>
                         </div>
-                        <div class="col-sm-5">
+                        <div class="col-sm-6">
                             <input class="form-check-input" type="radio" name="age" id="ageRadios" value="agegrp2">
-                            <label class="form-check-label" for="ageRadios">Young Adults (17-30)</label>
+                            <label class="form-check-label" for="ageRadios">Young Adults(17-30)</label>
                         </div>
-                        <div class="col-sm-5">
+                        <div class="col-sm-6">
                             <input class="form-check-input" type="radio" name="age" id="ageRadios" value="agegrp3">
-                            <label class="form-check-label" for="ageRadios">Young Adults (17-30)</label>
+                            <label class="form-check-label" for="ageRadios">Middle-Aged Adults(31-45)</label>
                         </div>
-                        <div class="col-sm-5">
+                        <div class="col-sm-6">
                             <input class="form-check-input" type="radio" name="age" id="ageRadios" value="agegrp4">
-                            <label class="form-check-label" for="ageRadios">Young Adults (17-30)</label>
+                            <label class="form-check-label" for="ageRadios">Old-Aged(46 & Above)</label>
                         </div>
                     </div>
                 </div>
-<!--
-<div class="form-group">
-                <label for="phoneNumber" class="col-sm-3 control-label">Age Group </label>
-                <div class="col-sm-9">
-                    <select class="form-control" id="agegroup">
-                        <option>Child (0-16)</option>
-                        <option>Young Adults (17-30)</option>
-                        <option>Middle-Aged Adults (31-45)</option>
-                        <option>Old-Aged Adults (Above 45)</option>
-                    </select>
-                </div>
-            </div>
--->
-            
-
-            <div class="form-group ">
-                    <label for="Height" class="col-sm-3 control-label">Height</label>
-                <div class="col-sm-9">
-                    <input type="number" id="height" placeholder="Please write your height in centimetres" class="form-control" required>
-                </div>
-            </div>
-             <div class="form-group">
-                    <label for="weight" class="col-sm-3 control-label">Weight </label>
-                <div class="col-sm-9">
-                    <input type="number" id="weight" placeholder="Please write your weight in kilograms" class="form-control" required>
-                </div>
-            </div>
-            
-<div class="form-group">
-                <label class="control-label col-sm-3">Gender</label>
+            </div> 
+            <div class="form-group">
+                <label class="control-label col-sm-6">Ever being a Covid paitient and Recovered for it?</label>
                 <div class="col-sm-6">
                     <div class="row">
                         <div class="col-sm-4">
-                            <input class="form-check-input" type="radio" name="gender" id="genderRadios" value="Female" >
+                            <input class="form-check-input" type="radio" name="recovered" id="recoveredRadios" value="Yes">
+                            <label class="form-check-label" for="recoveredRadios">Yes</label>
+                        </div>
+                        <div class="col-sm-4">
+                            <input class="form-check-input" type="radio" name="recovered" id="recoveredRadios" value="No">
+                            <label class="form-check-label" for="recoveredRadios">No</label>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+            
+            
+            <div class="form-group">
+                <label class="control-label col-sm-3">Gender*</label>
+                <div class="col-sm-6">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <input class="form-check-input" type="radio" name="gender" id="genderRadios" value="Female">
                             <label class="form-check-label" for="genderRadios">Female</label>
                         </div>
                         <div class="col-sm-4">
                             <input class="form-check-input" type="radio" name="gender" id="genderRadios" value="Male">
                             <label class="form-check-label" for="genderRadios">Male</label>
-                       </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            
-            
             <!-- </div> <!- /.form-group -->
             <div class="form-group"> 
-                <label class="control-label col-sm-3">Asthma Patient?</label>
+                <label class="control-label col-sm-6">Suffering from any breathing issues*</label>
                 <div class="col-sm-6">
                     <div class="row">
                         <div class="col-sm-4">
-                            <input class="form-check-input" type="radio" name="Asthma" id="asthmaRadios" value="Yes">
+                            <input class="form-check-input" type="radio" name="asthma" id="asthmaRadios" value="Yes">
                             <label class="form-check-label" for="asthmaRadios">Yes</label>
                         </div>
                         <div class="col-sm-4">
-                            <input class="form-check-input" type="radio" name="Asthma" id="asthmaRadios" value="No">
+                            <input class="form-check-input" type="radio" name="asthma" id="asthmaRadios" value="No">
                             <label class="form-check-label" for="asthmaRadios">No</label>
                        </div>
                     </div>
                 </div>
-            
-            <button type="button" id="bookslot" class="btn btn-primary btn-block" >Register</button>
-            <button type="button" id="viewdata" class="btn btn-primary btn-block" >ViewData</button>
+            </div>
+                
+        
+            <button type="button" id="bookslot" class="btn btn-primary btn-block register" >Register</button>
+            <a href="home.html"><button type="button" id="cancel" class="btn btn-primary btn-block cancelbtn">Cancel</button></a>
+
+        </div>
         </form> <!-- /form -->
+        <button type="button" id="viewdata" class="btn btn-primary btn-block orderofpeople" >Check the order of People to get vaccinated next</button>
+
     </div> <!-- ./container -->
 
 
@@ -150,7 +155,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 <script src="congfig.js"></script>
-<!--<script src="book.js"></script>-->
+
 <script>
     document.getElementById('bookslot').addEventListener('click' , bookslot );
     function bookslot() {
@@ -158,57 +163,73 @@
 	var lname = document.getElementById("lastName").value;
 	var email = document.getElementById("email").value;
 	var phoneNumber = document.getElementById("phoneNumber").value;
-
     var birthDate = document.getElementById("birthDate").value;
-    var agegroup = document.getElementById("ageRadios").checked?document.getElementById("ageRadios").value:"No";;
-	var height = document.getElementById("height").value;
-	var weight = document.getElementById('weight').value;
-	var gender = document.getElementById("genderRadios").checked?document.getElementById("genderRadios").value:"No";;
-	var asthma = document.getElementById("asthmaRadios").checked?document.getElementById("asthmaRadios").value:"No";
+    var agegroup = document.querySelector('input[name="age"]:checked').value;
+    var recovered = document.querySelector('input[name="recovered"]:checked').value;
+	var gender = document.querySelector('input[name="gender"]:checked').value;
+	var asthma = document.querySelector('input[name="asthma"]:checked').value;
     var priority;
 
-    //-------setting priority---------
-    if(asthma==="Yes" && weight>90 && agegroup === 'agegrp4'){
-        priority = 1;
-    }
-    else if(asthma==="Yes" && weight>90 && agegroup === 'agegrp3'){
-        priority = 2;
-    }
-    else if(asthma==="Yes" && weight<90 && agegroup === 'agegrp1'){
-        priority = 3;
-    }
-    else if(asthma==="Yes" && weight>90 && agegroup === 'agegrp2'){
-        priority = 4;
-    }
-    else if(asthma==="Yes" && weight>90 && agegroup === 'agegrp4'){
-        priority = 5;
-    }
-    else if(asthma==="No" && weight>90 && agegroup === 'agegrp4'){
-        priority = 6;
-    }
-    else{
-        priority=11;
-    }
+    if (fname !== "" && lname !== "" && email !== "" && phoneNumber !== "" && recovered !=="" && agegroup !== "" && gender !== "" && asthma !== "") {
 
-    
+            //-------setting priority---------
+            if (asthma === "Yes" && recovered ==="No" && agegroup === 'agegrp4') {
+                priority = 1;
+            }
+            else if (asthma === "Yes" && recovered ==="Yes" && agegroup === 'agegrp4') {
+                priority = 2;
+            }
+            else if (asthma === "Yes" && recovered ==="No" && agegroup === 'agegrp3') {
+                priority = 3;
+            }
+            else if (asthma === "Yes" && recovered ==="Yes" && agegroup === 'agegrp3') {
+                priority = 4;
+            }
+            else if (asthma === "Yes" && recovered ==="No" && agegroup === 'agegrp1') {
+                priority = 5;
+            }
+            else if (asthma === "Yes" && recovered ==="Yes" && agegroup === 'agegrp1') {
+                priority = 6;
+            }
+            else if (asthma === "Yes" && recovered ==="No" && agegroup === 'agegrp2') {
+                priority = 7;
+            }
+            else if (asthma === "Yes" && recovered ==="Yes" && agegroup === 'agegrp2') {
+                priority = 8;
+            }
+            else if (asthma === "No" && recovered ==="No" && agegroup === 'agegrp4') {
+                priority = 9;
+            }
+            else if (asthma === "No" && recovered ==="Yes" && agegroup === 'agegrp2') {
+                priority = 10;
+            }
+            else {
+                priority = 11;
+            }
 
-	const db = firebase.firestore();
-	const users_db = db.collection('users');
-	users_db.doc(email).set({
-		first_name: fname,
-		last_name: lname,
-		email: email,
-		phoneNumber: phoneNumber,
-        DOB: birthDate,
-        age_group: agegroup,
-		height: height,
-		weight: weight,
-		gender: gender,
-        asthma: asthma,
-        priority:priority
-	})
-		.then(() => console.log('updated info'))
-		.catch(err => console.error(err))
+            const db = firebase.firestore();
+            const users_db = db.collection('users');
+            users_db.doc(email).set({
+                first_name: fname,
+                last_name: lname,
+                email: email,
+                phoneNumber: phoneNumber,
+                DOB: birthDate,
+                age_group: agegroup,
+                recovered: recovered,
+                gender: gender,
+                asthma: asthma,
+                priority: priority
+            })
+            .then( data => {alert("Congrats. You will be vaccinated soon!! ");
+                })
+                .catch(err => console.error(err))
+            
+        }
+        else{
+            alert("Enter all Credentials");
+        }
+
 }
 document.getElementById('viewdata').addEventListener('click', viewData);
 function viewData() {
@@ -217,13 +238,12 @@ function viewData() {
 	var email = document.getElementById("email").value;
     var phoneNumber = document.getElementById("phoneNumber").value; 
     var birthDate = document.getElementById("birthDate").value;
-    var agegroup = document.getElementById("ageRadios").checked.value;
-	var height = document.getElementById("height").value;
-	var weight = document.getElementById('weight').value;
-	var gender = document.getElementById("genderRadios").value;
+    var agegroup = document.querySelector('input[name="age"]:checked').value;
+	var gender = document.querySelector('input[name="gender"]:checked').value;
     var asthma = document.getElementById("asthmaRadios").value;
+    var recovered = document.querySelector('input[name="recovered"]:checked').value;
+    if (fname !== "" && lname !== "" && email !== "" && phoneNumber !== "" && recovered !=="" && agegroup !== "" && gender !== "" && asthma !== "") {
     
-
     const db = firebase.firestore();
     const users_db = db.collection('users');
     users_db.doc(email).get().then(function (doc) {
@@ -237,6 +257,11 @@ function viewData() {
             console.log("Error getting document:", error);
         });
         location.replace("viewdata.html")
+    }
+    else{
+        alert("Get yourself register first");
+
+    }
 
 }
 

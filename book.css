@@ -2,10 +2,23 @@ body {
    background-size: cover;
 }
 
+.navbar{
+   margin: 20px;
+   margin-left: 50px;
+   margin-right: 50px;
+   padding: 5px;
+}
+.logo
+{
+   height: 40px;
+}
+.navbar-brand{
+   text-align: center;
+}
+
 *[role="form"] {
-   max-width: 830px;
-   padding: 15px;
-   margin: 0 auto;
+   max-width: 830px; 
+   margin: auto;
    border-radius: 0.3em;
    background-color: #f2f2f2;
 }
@@ -16,9 +29,14 @@ body {
    font-weight: 600;
    color: #000000;
    margin-top: 5%;
-   text-align: center;
+   padding-top: 30px;
+   margin-left: 60px;
+
    text-transform: uppercase;
    letter-spacing: 4px;
+}
+.form-group{
+   padding:5px;
 }
 
 .form-horizontal{
@@ -35,3 +53,28 @@ body {
    }
    
 }
+.register{
+   width: 20%;
+   margin-left: 60px;
+   cursor: pointer;
+   
+}
+.cancelbtn{
+   width: 20%;
+   margin-left: 110px;
+   cursor: pointer;
+}
+.orderofpeople{
+  width: 75%;
+  background-color: rgb(0, 174, 255);
+  padding: 18px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 50px;
+  margin-left: 145px;
+  margin-right: 30px;
+    }
+
+

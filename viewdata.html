@@ -18,10 +18,43 @@
     <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
 
+<style>
+    .navbar {
+        margin: 20px;
+        margin-left: 50px;
+        margin-right: 50px;
+        padding: 15px;
+        height: 70px;
+    }
 
+    .logo {
+        height: 40px;
+    }
+
+    .navbar-brand {
+        text-align: center;
+        size: 60px;
+    }
+    .goback{
+        margin-left: 150px;
+        margin-right: 50px;
+        margin-right: 50px;
+        padding: 10px;
+        
+    }
+</style>
 </head>
 
-<body class="container">
+<body>
+    <nav class="navbar navbar-light bg-info">
+        <img src="logo.jpg" class="logo">
+        <a class="navbar-brand font-weight-bold text-primary">vaccineCentre</a>
+        <form class="form-inline">
+          <button id="logout" class="btn btn-outline-primary my-sm-0" type="button">LogOut</button>
+        </form>
+      </nav>
+
+<div class="container">
     <h2>Registered for Vaccine</h2>
     <table class="table table-striped">
         <thead>
@@ -34,6 +67,9 @@
         <tbody id="data">
         </tbody>
     </table>
+</div>
+<a href="book.html"><button type="button" id="bookslot" class="btn btn-primary btn-block goback">Go Back</button></a>
+
 </body>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
