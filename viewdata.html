@@ -45,7 +45,9 @@
     var db = firebase.firestore();
 
     var users_db = db.collection('users');
+    
     var allex = users_db
+        .orderBy("priority","asc").limit(10)
         .get()
         .then(snapshot => {
             tbl  = document.createElement('table');
@@ -53,10 +55,8 @@
                 var First_Name = doc.data().first_name;
                 var last_name = doc.data().last_name;
                 var email = doc.data().email;
-                //var gender = doc.data().gender;
-                // document.getElementById("email").innerHTML = email;
-                // document.getElementById("fname").innerHTML = First_Name;
-                // document.getElementById("lname").innerHTML = last_name;
+                
+
                 var tr = tbl.insertRow();
                 var td = tr.insertCell();
                 td.appendChild(document.createTextNode(First_Name));
