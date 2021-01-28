@@ -67,7 +67,7 @@
 
                             <div class="text-center">
                                 <button id="login" type="submit"
-                                    class="btn btn-dark my-4">LogIn</button></a>
+                                    class="btn btn-dark my-4" >LogIn</button></a>
                             </div>
                             <div><a href="#"
                                     onclick="document.getElementById('signmodal').style.display='block'"><small>Don't
@@ -168,9 +168,14 @@
             var password = document.getElementById("password");
             var confpasswd = document.getElementById("confpasswd");
             //alert(email + ":email");
-            const data = await auth.createUserWithEmailAndPassword(email.value, password.value).catch(e => alert(e.message));
-            alert("Signed Up");
+            if( password.value == confpasswd.value && email.value != ""){
+                const data = await auth.createUserWithEmailAndPassword(email.value, password.value).catch(e => alert(e.message));
+                alert("Signed Up");
+                location.replace("home.html")
 
+
+            }
+            
         }
 
 
@@ -178,11 +183,14 @@
          async function LogIn() {
             var email = document.getElementById("email");
             var password = document.getElementById("password");
-            var confpasswd = document.getElementById("confpasswd");
             //alert(email + ":email");
-            const data = await auth.signInWithEmailAndPassword(email.value, password.value)
-            alert("Signed In");
+            if( password.value != "" && email.value != ""){
+                const data = await auth.signInWithEmailAndPassword(email.value, password.value)
+                alert("Signed In");
+                location.replace("home.html")
 
+            }
+            
         }
     </script>
 </body>

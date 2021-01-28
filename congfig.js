@@ -3,7 +3,7 @@
 var firebaseConfig = {
     apiKey: "AIzaSyCWv68WhFmVY_DEmddRUKwstrdZBZVL9W8",
     authDomain: "registeruser-bcbdd.firebaseapp.com",
-    databaseURL: "https://codellion-project.firebaseio.com",
+    databaseURL: "https://registeruser-bcbdd-default-rtdb.firebaseio.com",
     projectId: "registeruser-bcbdd",
     storageBucket: "registeruser-bcbdd.appspot.com",
     messagingSenderId: "443651136519",
@@ -12,4 +12,4 @@ var firebaseConfig = {
 };
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
-firebase.analytics();
+//firebase.analytics();

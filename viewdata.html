@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<title>Assignment</title>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="book.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-firestore.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+
+</head>
+
+<body class="container">
+    <h2>Registered for Vaccine</h2>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody id="data">
+        </tbody>
+    </table>
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<script src="congfig.js"></script>
+<script>
+    console.log("Initialisation Successful!");
+    var db = firebase.firestore();
+
+    var users_db = db.collection('users');
+    var allex = users_db
+        .get()
+        .then(snapshot => {
+            tbl  = document.createElement('table');
+            snapshot.forEach(doc => {
+                var First_Name = doc.data().first_name;
+                var last_name = doc.data().last_name;
+                var email = doc.data().email;
+                //var gender = doc.data().gender;
+                // document.getElementById("email").innerHTML = email;
+                // document.getElementById("fname").innerHTML = First_Name;
+                // document.getElementById("lname").innerHTML = last_name;
+                var tr = tbl.insertRow();
+                var td = tr.insertCell();
+                td.appendChild(document.createTextNode(First_Name));
+                td.setAttribute("id", "fname");
+
+                var tr1 = tbl.insertRow();
+                var td1 = tr.insertCell();
+                td1.appendChild(document.createTextNode(last_name));
+                td1.setAttribute("id", "lname");
+                
+                var tr2 = tbl.insertRow();
+                var td2 = tr.insertCell();
+                td2.appendChild(document.createTextNode(email));
+                td2.setAttribute("id", "email");
+
+                document.getElementById("data").appendChild(tr);
+                //document.getElementById("gender").innerHTML = gender;   
+
+                console.log(doc.data());
+
+
+            });
+        })
+        .catch(err => {
+            console.log('Error getting documents', err);
+        });
+</script>
+
+</html>

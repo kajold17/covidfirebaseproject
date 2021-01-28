@@ -12,10 +12,11 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-light bg-light">
-        <a class="navbar-brand">Navbar</a>
+    <nav class="navbar navbar-light bg-info">
+        <img src="logo.jpg" class="logo">
+        <a class="navbar-brand font-weight-bold text-primary">vaccineCentre</a>
         <form class="form-inline">
-          <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">LogOut</button>
+          <button id="logout" class="btn btn-outline-primary my-2 my-sm-0" type="button">LogOut</button>
         </form>
       </nav>
 
@@ -52,13 +53,91 @@
 
     </div>
 
+
+    <section class="featured-categories">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="symptoms.jpg">
+                </div>   
+                <div class="col-md-4">
+                    <img src="homeimg2.png">
+                </div>   
+                <div class="col-md-4">
+                    <img src="homeimg3.jpg">
+                </div>    
+                
+            </div>
+            
+        </div>
+    </section>
+
     <!--Book slot-->
-    <div class="slotbtn">
-        <a href="book.html"><button type="button" class="btn btn-outline-primary">Book Slot</button></a>
+    <div>
+        <a href="book.html"><button type="button" class="btn btn-outline-primary slotbtn">Book Slot</button></a>
     </div>
+
+    <!-------Newsss----->
+    <section class="news">
+        <div class="container">
+            <div class="title-box">
+                <h2>Covid's News</h2>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                <div class="product-top">
+                    <div class="card" height="300px">
+                        <img class="card-img-top" src="news1.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <p class="card-text"><a href="https://edition.cnn.com/world/live-news/coronavirus-pandemic-vaccine-updates-01-27-21/index.html">The latest on the coronavirus pandemic and vaccines.</a></p>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="product-top">
+                        <div class="card" height="300px">
+                            <img class="card-img-top" src="news2.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <p class="card-text"><a href="https://www.webmd.com/lung/news/20210126/how-dangerous-is-coronavirus-to-the-middle-aged#1">How Dangerous Is Coronavirus to the Middle-Aged?
+                                </a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="product-top">
+                        <div class="card" height="300px">
+                            <img class="card-img-top" src="news3.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <p class="card-text"><a href="bbc.com/news/world-europe-55822602">EU demands UK-made AstraZeneca vaccine doses"</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="product-top">
+                        <div class="card" height="300px">
+                            <img class="card-img-top" src="news4.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <p class="card-text"><a href="https://timesofindia.indiatimes.com/india/more-covid-19-vaccines-on-their-way-in-india-harsh-vardhan/articleshow/80484538.cms">More Covid-19 vaccines on their way in India</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+                    
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-<script src=""></script>
+<script>
+    document.getElementById('logout').addEventListener('click', logOut);
+    function logOut(){
+        location.replace("main.html");
+    }
+</script>
 </html>

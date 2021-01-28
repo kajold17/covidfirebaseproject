@@ -11,7 +11,7 @@
 // 			.removeClass('has-error')
 // 		}
 // 	});
-	
+
 // // 	$.validate({
 // 		rules:
 // 		{	
@@ -55,36 +55,41 @@
 // 					number: " Only numbers allowed"
 // 				},
 // 			}
-			
+
 // 	});
 // });
 
-var fname = document.getElementById("firstName");
-var lname = document.getElementById("lastName");
-var email = document.getElementById("email");
-var phoneNumber = document.getElementById("phoneNumber");
-
-var birthDate = document.getElementById("birthDate");
-var height = document.getElementById("height");
-var weight = document.getElementById('weight')
-var gender= document.getElementById("genderRadios");
-var asthma= document.getElementById("asthmaRadios");
 
 
-const db = firebase.firestore();
-const users_db = db.collection('users');
+//-----------Ready data-----------------//
 
 
-users_db.doc(email).set({
-	first_name : fname.val(),
-	last_name : lname.val(),
-	email : email.val(),
-	phoneNumber : phoneNumber.val(),
-	DOB : birthDate.val(),
-	height: height.val(),
-	weight: weight.val(),
-	gender: gender.val(),
-	asthma: asthma.val()
-})
-.then(() => console.log('updated info'))
-.catch(err => console.error(err))
+function bookslot() {
+	var fname = document.getElementById("firstName").value;
+	var lname = document.getElementById("lastName").value;
+	var email = document.getElementById("email").value;
+	var phoneNumber = document.getElementById("phoneNumber").value;
+
+	var birthDate = document.getElementById("birthDate").value;
+	var height = document.getElementById("height").value;
+	var weight = document.getElementById('weight').value;
+	var gender = document.getElementById("genderRadios").value;
+	var asthma = document.getElementById("asthmaRadios").value;
+
+
+	const db = firebase.firestore();
+	const users_db = db.collection('users');
+	users_db.doc('email').set({
+		first_name: fname,
+		last_name: lname,
+		email: email,
+		phoneNumber: phoneNumber,
+		DOB: birthDate,
+		height: height,
+		weight: weight,
+		gender: gender,
+		asthma: asthma
+	})
+		.then(() => console.log('updated info'))
+		.catch(err => console.error(err))
+}
