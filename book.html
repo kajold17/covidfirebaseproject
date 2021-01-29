@@ -221,7 +221,7 @@
                 asthma: asthma,
                 priority: priority
             })
-            .then( data => {alert("Congrats. You will be vaccinated soon!! ");
+            .then( data => {alert("Congrats, you have successfully register. You will be vaccinated soon!! You can check the order of people to be vaccinted according to the priority by clicking on the button below the form");
                 })
                 .catch(err => console.error(err))
             
@@ -265,6 +265,10 @@ function viewData() {
 
 }
 
+document.getElementById('logout').addEventListener('click', logOut);
+    function logOut(){
+        location.replace("main.html");
+    }
 
 </script>
 
